@@ -1,0 +1,76 @@
+name: Bug 回報
+description: 發現 / 測試到問題，回報給 RD 改進
+title: "【BUG】[請輸入明確的標題]"
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: 描述發現 / 測試到的問題
+      description: 簡潔清楚的描述說明這個問題是什麼。
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: 如何重現
+      description: 請描述重現這個問題的步驟
+      placeholder: |
+        1. 打開網站 https://example/path/to/the/bug/page
+        2. 直接點表單擊送出按鈕
+        3. 看見 500 錯誤畫面（附上截圖）
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 原本預期的行為
+      description: 簡潔清楚的描述，說明你如何預期這個行為原本應該發生什麼事情
+      placeholder: 告訴我們你看到了什麼
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: 問題發生在什麼作業系統上？
+      multiple: true
+      options:
+        - macOS
+        - Windows
+        - Android
+        - iOS
+        - 其他（請補充在備註上）
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: 問題發生在什麼瀏覽器上？
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
+        - 其他（請補充在備註上）
+  - type: textarea
+    id: note
+    attributes:
+      label: 備註
+      description: 值得一提的額外發現
+      placeholder: 例如：發現把視窗關掉後再打開，重新操作一次問題就沒出現了
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: 螢幕截圖
+      description: 盡可能上傳全螢幕的截圖
